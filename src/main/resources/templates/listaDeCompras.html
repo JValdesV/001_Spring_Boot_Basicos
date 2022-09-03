@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Lista de frutas</h1>
+<table>
+	<thead>
+		<tr>
+			<th>N°</th>
+			<th>Fruta</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr th:each="elemento,aux:${elementos}">
+			<td th:text="${aux.count}"></td>
+			<td th:text="${elemento}"></td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+</body>
+</html>
