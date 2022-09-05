@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 public class HomeController {
@@ -48,6 +49,16 @@ public class HomeController {
 		return "webestatica";
 	}
 	
+	@RequestMapping("/datosflash")
+	public String datosFlash() {
+		return "datosflash";
+	}
+	
+	@RequestMapping("/crearError")
+	public String mensajeFlash(RedirectAttributes redirectAttributes) {
+		redirectAttributes.addFlashAttribute("error", "Esto es una variable flash temporal");
+		return "redirect:/datosflash";
+	}
 	
 	
 	
