@@ -41,10 +41,12 @@ public class HomeController {
 		model.addAttribute("edad",edad);
 		
 		return "recibedatos";
-		
-		
 	}
 	
+	@RequestMapping("/webestatica")
+	public String estatico() {
+		return "webestatica";
+	}
 	
 	
 	
